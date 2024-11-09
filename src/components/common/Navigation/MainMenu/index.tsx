@@ -1,37 +1,20 @@
-'use client'
-import React, { useState } from 'react';
-import type { MenuProps } from 'antd';
-import { Menu } from 'antd';
-import { isMobile } from 'react-device-detect';
+import React from 'react';
+import { Menu, MenuProps } from 'antd';
 
-type MenuItem = Required<MenuProps>['items'][number];
+interface MainMenuProps {
+  mode: MenuProps['mode'];
+}
 
-const items: MenuItem[] = [
-  {
-    label: 'Գլխավոր',
-    key: 'mail',
-  },
-  {
-    label: 'Մեր մասին',
-    key: 'app',
-  },
-  {
-    label: 'Հետադարձ կապ',
-    key: 'SubMenu',
-  },
-];
-
-const MainMenu: React.FC = () => {
-  const [current, setCurrent] = useState('mail');
-
-  const onClick: MenuProps['onClick'] = (e) => {
-    console.log('click ', e);
-    setCurrent(e.key);
-  };
-
-  return <Menu onClick={onClick} selectedKeys={[current]}   mode={
-    isMobile ? 'inline' : 'horizontal'
-  } items={items} />;
+const MainMenu: React.FC<MainMenuProps> = ({ mode }) => {
+  return (
+    <Menu mode={mode}>
+      <Menu.Item key="explore">Գլխավոր</Menu.Item>
+      <Menu.Item key="features">Մեր մասին</Menu.Item>
+      <Menu.Item key="about">Կատալոգ</Menu.Item>
+      <Menu.Item key="about">Ծառայություններ</Menu.Item>
+      <Menu.Item key="contact">Հետադարձ կապ</Menu.Item>
+    </Menu>
+  );
 };
 
 export default MainMenu;

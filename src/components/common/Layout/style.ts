@@ -5,10 +5,10 @@ const StyledLayout = styled(Layout)`
   --guestLayoutPadding: 0 40px;
 
   &.ant-layout {
-    background: var(--layoutBgColor);
+    background: #f8f9f8;
     min-height: 100dvh;
     .app-main-layout {
-      background: var(--layoutBgColor);
+      background: #f8f9f8;
       z-index: 1;
     }
     &.guest-layout {

@@ -6,7 +6,7 @@ const { Header } = Layout;
 const StyledHeader = styled(Header)`
   --headerHeight: var(--space7x);
   --headerPadding: 12px 8px 12px 0;
-  --headerBgColor: var(--layoutBgColor);
+  --headerBgColor: #f8f9f8;
 
   .dashboard-link {
     display: flex;

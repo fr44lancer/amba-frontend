@@ -2,8 +2,10 @@
 import { motion } from 'framer-motion';
 import React from 'react';
 import { HeroHighlight, Highlight } from '@/components/ui/hero-highlight';
+import { Col, Row } from 'antd';
 
 export const HomePageText = () => {
+  const words = ['չափսերի', 'գույնի', 'ձևի', 'բարձրության'];
   return (
     <HeroHighlight>
       <motion.h1
@@ -19,12 +21,28 @@ export const HomePageText = () => {
           duration: 0.5,
           ease: [0.4, 0.0, 0.2, 1],
         }}
-        className="text-2xl px-4 md:text-4xl lg:text-5xl font-bold text-neutral-700 dark:text-white max-w-4xl leading-relaxed lg:leading-snug text-center mx-auto "
+        className="text-xl px-4  font-bold text-white dark:text-white  leading-relaxed lg:leading-snug text-center mx-auto "
       >
-        Բարձրակարգ պահեստային լուծումներ՝
-        <Highlight className="text-black dark:text-white">
-          ցանկացած բիզնեսի համար
-        </Highlight>
+        <Row>
+          <Col
+            xs={24}
+            className="text-xl px-4  font-bold text-white dark:text-white  leading-relaxed lg:leading-snug text-center mx-auto "
+          >
+            Բարձրակարգ պահեստային լուծումներ՝
+          </Col>
+          <Col xs={24}>
+            <Highlight className="text-4xl text-black dark:text-white m-2 p-4">
+              տարբեր չափսերի, գույնի, ձևի և բարձրության,
+            </Highlight>
+          </Col>
+          <Col
+            xs={24}
+            className="text-xl px-4  font-bold text-white dark:text-white  leading-relaxed lg:leading-snug text-center mx-auto "
+          >
+            {' '}
+            ցանկացած բիզնեսի համար:
+          </Col>
+        </Row>
       </motion.h1>
     </HeroHighlight>
   );

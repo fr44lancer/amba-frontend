@@ -1,5 +1,4 @@
 import AppPage from '@/components/common/Layout/AppPage';
-import ErrorPage from '@/components/pages/ErrorPage';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -14,9 +13,5 @@ export const viewport = {
 };
 
 export default function NotFoundPage() {
-  return (
-    <AppPage contentClassName={'no-padding'}>
-      <ErrorPage errorCode={404} desc={'This page could not be found.'} />
-    </AppPage>
-  );
+  return <AppPage>404</AppPage>;
 }

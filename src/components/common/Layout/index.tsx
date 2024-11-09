@@ -1,9 +1,11 @@
 'use client';
-import { ReactNode } from 'react';
-import { Layout, Menu, MenuProps } from 'antd';
-import AppMain from './AppMain';
-import AppHeader from './AppHeader';
+import { ReactNode, useEffect, useMemo, useState } from 'react';
+import { Layout, MenuProps } from 'antd';
 import StyledLayout from '@/components/common/Layout/style';
+import Navbar from '@/components/common/Navigation/Navbar';
+import { isMobile } from 'react-device-detect';
+import { MoonLoader } from 'react-spinners';
+import AppFooter from '@/components/global/Footer';
 
 interface IAppLayout {
   children?: ReactNode;
@@ -24,21 +26,44 @@ const items1: MenuProps['items'] = [
 }));
 
 const AppLayout = ({ children }: IAppLayout) => {
+  const [pageLoading, setPageLoading] = useState(true);
+
+  useEffect(() => {
+    const timoutId = setTimeout(() => {
+      setPageLoading(false);
+    }, 50);
+
+    return () => {
+      clearTimeout(timoutId);
+    };
+  }, []);
+
+  const layoutClassName = useMemo(() => {
+    return `layout${isMobile && !pageLoading ? '-mobile' : ''}`;
+  }, [isMobile, pageLoading]);
+
   return (
     <StyledLayout>
-      <Layout className={'app-main-layout'}>
-        <AppHeader />
-        <Sider width={200}>
-          <Menu
-            mode="inline"
-            defaultSelectedKeys={['1']}
-            defaultOpenKeys={['sub1']}
-            style={{ height: '100%' }}
-            items={items1}
+      {pageLoading ? (
+        <div className={'flex items-center justify-center w-full min-h-screen'}>
+          <MoonLoader
+            color={'#1a9990'}
+            loading={true}
+            size={32}
+            aria-label="Loading Spinner"
+            data-testid="loader"
+            speedMultiplier={0.4}
           />
-        </Sider>
-        <AppMain>{children}</AppMain>
-      </Layout>
+        </div>
+      ) : (
+        <>
+          <Navbar />
+          <Layout>
+            <Content>{children}</Content>
+            <AppFooter />
+          </Layout>
+        </>
+      )}
     </StyledLayout>
   );
 };
