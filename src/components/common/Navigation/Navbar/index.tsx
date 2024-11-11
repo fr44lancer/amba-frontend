@@ -32,7 +32,7 @@ const Navbar = () => {
               <MenuOutlined size={32} />
             </Button>
           </Col>
-          <Col xs={6}>
+          <Col xs={6} className={'hidden md:block'}>
             <ContactsBar />
           </Col>
         </Row>
