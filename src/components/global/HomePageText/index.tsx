@@ -5,7 +5,6 @@ import { HeroHighlight, Highlight } from '@/components/ui/hero-highlight';
 import { Col, Row } from 'antd';
 
 export const HomePageText = () => {
-  const words = ['չափսերի', 'գույնի', 'ձևի', 'բարձրության'];
   return (
     <HeroHighlight>
       <motion.h1

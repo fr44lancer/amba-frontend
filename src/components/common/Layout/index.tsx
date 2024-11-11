@@ -1,9 +1,8 @@
 'use client';
-import { ReactNode, useEffect, useMemo, useState } from 'react';
+import { ReactNode, useEffect, useState } from 'react';
 import { Layout, MenuProps } from 'antd';
 import StyledLayout from '@/components/common/Layout/style';
 import Navbar from '@/components/common/Navigation/Navbar';
-import { isMobile } from 'react-device-detect';
 import { MoonLoader } from 'react-spinners';
 import AppFooter from '@/components/global/Footer';
 
@@ -37,10 +36,6 @@ const AppLayout = ({ children }: IAppLayout) => {
       clearTimeout(timoutId);
     };
   }, []);
-
-  const layoutClassName = useMemo(() => {
-    return `layout${isMobile && !pageLoading ? '-mobile' : ''}`;
-  }, [isMobile, pageLoading]);
 
   return (
     <StyledLayout>

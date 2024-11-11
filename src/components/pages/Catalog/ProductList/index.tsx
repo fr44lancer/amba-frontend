@@ -1,55 +1,33 @@
-import { HoverEffect } from '@/components/ui/hover-cards';
-import img1 from '@/assets/img/catalog/cat1.jpg';
-import img2 from '@/assets/img/catalog/cat2.jpg';
-import img3 from '@/assets/img/catalog/cat3.jpg';
-import img4 from '@/assets/img/catalog/cat4.jpg';
-import img5 from '@/assets/img/catalog/cat5.jpg';
-import img6 from '@/assets/img/catalog/cat6.jpg';
+import img1 from '@/assets/img/catalog/pahest/1.jpg';
+import img2 from '@/assets/img/catalog/pahest/2.jpg';
+import img3 from '@/assets/img/catalog/pahest/3.jpg';
+import img4 from '@/assets/img/catalog/pahest/4.jpg';
+import img5 from '@/assets/img/catalog/pahest/5.jpg';
+import img6 from '@/assets/img/catalog/pahest/6.jpg';
+import img7 from '@/assets/img/catalog/pahest/7.jpg';
+import img8 from '@/assets/img/catalog/pahest/8.jpg';
+import img11 from '@/assets/img/catalog/pahest/11.jpg';
+import img12 from '@/assets/img/catalog/pahest/12.jpg';
+import img13 from '@/assets/img/catalog/pahest/13.jpg';
+import img14 from '@/assets/img/catalog/pahest/14.jpg';
+
+import { HoverImagesEffect } from '@/components/ui/hover-images';
 
 export function ProductList() {
-  return <HoverEffect items={services} />;
+  return <HoverImagesEffect items={images} />;
 }
-export const services = [
-  {
-    title: 'Ստելաժներ',
-    description:
-      'Ամուր և բազմաշերտ պահեստավորման լուծումներ մեծ ծավալի ապրանքների համար, ապահովելով առավելագույն արդյունավետություն և հուսալիություն պահեստավորման մեջ:',
-    link: 'https://amba.am/stelajner',
-    image: img1.src,
-  },
-  {
-    title: 'Պահեստներ',
-    description:
-      'Բարձրակարգ պահեստավորման տարածքներ՝ նախատեսված ձեր բիզնեսի կարիքներին համապատասխան հարմարեցված լուծումներով:',
-    link: 'https://amba.am/pahestner',
-    image: img2.src,
-  },
-  {
-    title: 'Սառնարաններ',
-    description:
-      'Ջերմաստիճանի կառավարման լուծումներ սննդի և այլ ապրանքների պահպանման համար, որոնք պահանջում են խիստ պայմանավորվածություն:',
-    link: 'https://amba.am/sarnaraner',
-    image: img3.src,
-  },
-  {
-    title: 'Աքսեսուարներ',
-    description:
-      'Լրացուցիչ պահեստավորման սարքավորումներ և աքսեսուարներ, որոնք նպաստում են պահեստի կազմակերպմանն ու արդյունավետությանը:',
-    link: 'https://amba.am/aksesuarner',
-    image: img4.src,
-  },
-  {
-    title: 'Սայլակներ',
-    description:
-      'Ճկուն և հարմար սայլակներ՝ բեռների տեղափոխման համար՝ հեշտացնելով և արագացնելով աշխատանքի գործընթացը պահեստում:',
-    link: 'https://amba.am/saylaker',
-    image: img5.src,
-  },
-  {
-    title: 'Դրամարկղային սեղաններ',
-    description:
-      'Պրոֆեսիոնալ դրամարկղային սեղաններ՝ նախատեսված հարմարավետ և կազմակերպված առևտրի համար:',
-    link: 'https://amba.am/dramarkghayin-seghaner',
-    image: img6.src,
-  },
+
+export const images = [
+  { image: img1.src },
+  { image: img2.src },
+  { image: img3.src },
+  { image: img4.src },
+  { image: img5.src },
+  { image: img6.src },
+  { image: img7.src },
+  { image: img8.src },
+  { image: img11.src },
+  { image: img12.src },
+  { image: img13.src },
+  { image: img14.src },
 ];

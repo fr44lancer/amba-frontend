@@ -3,31 +3,35 @@ import React from 'react';
 import { Col, Row } from 'antd';
 import HomeSlider from '@/components/global/HomeSlider';
 import { HomeTestimonials } from '@/components/pages/Home/HomeTestimonials';
-import { ProductList } from '@/components/pages/Catalog/ProductList';
 import { HomeFeatures } from '@/components/pages/Home/HomeFeatures';
+import { AppleCardsCarouselDemo } from '@/components/global/HomeServices';
+import AppPage from '@/components/common/Layout/AppPage';
+import { CategoryList } from '@/components/pages/Catalog/CategoryList';
 
 export const Home = () => {
   return (
-    <Row gutter={[24, 24]}>
-      <Col xs={24}>
-        <HomeSlider />
-      </Col>
-      <Col xs={24} className={'px-8 md:px-24'}>
-        <Row align={'top'} gutter={60}>
-          <Col xs={24} md={18}>
+    <>
+      <HomeSlider />
+      <AppPage>
+        <Row gutter={[0, 24]}>
+          <Col xs={24}></Col>
+          <Col xs={24} md={16}>
             <h1 className={'font-bold text-4xl mt-4 md:mt-12'}>Կատալոգ</h1>
-            <ProductList />
+            <CategoryList />
           </Col>
-          <Col xs={24} md={6}>
+          <Col xs={24} md={8}>
             <h1 className={'font-bold text-4xl mt-12'}>Մեր մասին</h1>
             <HomeTestimonials />
           </Col>
+          <Col xs={24}>
+            <AppleCardsCarouselDemo />
+          </Col>
+          <Col xs={24}>
+            <HomeFeatures />
+          </Col>
         </Row>
-      </Col>
-      <Col xs={24}>
-        <HomeFeatures />
-      </Col>
-    </Row>
+      </AppPage>
+    </>
   );
 };
 

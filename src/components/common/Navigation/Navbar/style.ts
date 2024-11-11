@@ -23,7 +23,7 @@ const StyledNavbar = styled.div`
     margin: 0px auto;
     max-width: 1380px;
     width: 100%;
-    height: 80px;
+    height: 88px;
   }
 
   .logo {
@@ -55,7 +55,7 @@ const StyledNavbar = styled.div`
   .menuButton {
     float: right;
     height: 32px;
-    padding: 6px;
+    padding: 0px;
     margin-top: 14px;
     display: none;
     background: none;
