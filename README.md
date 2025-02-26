@@ -57,10 +57,10 @@ yarn start  # or npm run start
 ├── 📁 public         # Static assets (images, icons, etc.)
 ├── 📁 src
 │   ├── 📁 components  # Reusable UI components
-│   ├── 📁 pages       # Next.js pages
-│   ├── 📁 styles      # Global styles (Tailwind CSS)
+│   ├── 📁 app       # Next.js app routing
+│   ├── 📁 assets      # Global styles (Tailwind CSS)
 │   ├── 📁 utils       # Utility functions
-│   ├── 📁 data        # Mock product data (if not using API)
+│   ├── 📁 service/api        # API config
 ├── 📄 package.json   # Dependencies & scripts
 ├── 📄 README.md      # Project documentation
 ```
