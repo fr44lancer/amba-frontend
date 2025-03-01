@@ -1,6 +1,6 @@
 {
-  "name": "dashboard-frontend",
-  "version": "2.2.4",
+  "name": "amba-frontend",
+  "version": "0.1.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
